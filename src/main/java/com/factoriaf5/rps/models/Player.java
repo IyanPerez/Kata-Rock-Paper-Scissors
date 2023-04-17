@@ -1,5 +1,5 @@
 package com.factoriaf5.rps.models;
-import java.util.Scanner;
+
 
 public class Player {
 
@@ -21,17 +21,13 @@ public class Player {
     }
 
     public void movementSelection(Player player) {
-        Scanner scanner = new Scanner(System.in);
         
         System.out.print("PLAYER: " +  player.getName() + "==> choose your move: ");
-        String input1 = scanner.nextLine();
-        
-        player.setChoice(input1);
-        System.gc();
-        // scanner.close();
     }
 
-    public void playAgainst(Player OtherPlayer) {
+    public void playAgainst(Player OtherPlayer) { 
+        // Crear las clases figura(piedra, papel, tijera)
+        // Crear un metodo para instanciar las respuestas
         if (OtherPlayer.getChoice() == "Scissors") {
             System.out.println("win");
         }
@@ -39,7 +35,7 @@ public class Player {
             System.out.println("lose");
         }
         else 
-            System.out.println("prueba");
+            System.out.println("tie");
     }
 
     public String getName() {
